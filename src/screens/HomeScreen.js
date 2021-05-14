@@ -122,66 +122,63 @@ const HomeScreen = () => {
 							<div className="HomeScreen__movieList__resultClear">
 								{searchResult ? (
 									<p onClick={() => clearSearch()}>
-										Click here to clear Search Results{' '}
+										Click here to clear Search Results ❌
 										<span></span>
 									</p>
 								) : null}
 							</div>
 
 							<div className="HomeScreen__movieList__results">
-								{searchResult
-									? searchResult?.map((movie, index) => {
-											const id = movie.url.split('/');
-											const favourite =
-												favMovies.includes(
-													id[id.length - 2]
-												);
-											return (
-												<MovieCard
-													key={index}
-													releaseDate={
-														movie.release_date
-													}
-													director={movie.director}
-													description={
-														movie.opening_crawl
-													}
-													episodeId={movie.episode_id}
-													title={movie.title}
-													movieId={id[id.length - 2]}
-													favHandler={
-														favMovieListHandler
-													}
-													favourite={favourite}
-												/>
-											);
-									  })
-									: movies?.map((movie, index) => {
-											const id = movie.url.split('/');
-											const favourite =
-												favMovies.includes(
-													id[id.length - 2]
-												);
-											return (
-												<MovieCard
-													key={index}
-													releaseDate={
-														movie.release_date
-													}
-													director={movie.director}
-													description={
-														movie.opening_crawl
-													}
-													episodeId={movie.episode_id}
-													title={movie.title}
-													movieId={id[id.length - 2]}
-													favHandler={
-														favMovieListHandler
-													}
-													favourite={favourite}
-												/>
-											);
-									  })}
+								{!searchResult ? (
+									movies?.map((movie, index) => {
+										const id = movie.url.split('/');
+										const favourite = favMovies.includes(
+											id[id.length - 2]
+										);
+										return (
+											<MovieCard
+												key={index}
+												releaseDate={movie.release_date}
+												director={movie.director}
+												description={
+													movie.opening_crawl
+												}
+												episodeId={movie.episode_id}
+												title={movie.title}
+												movieId={id[id.length - 2]}
+												favHandler={favMovieListHandler}
+												favourite={favourite}
+											/>
+										);
+									})
+								) : searchResult.length !== 0 ? (
+									searchResult?.map((movie, index) => {
+										const id = movie.url.split('/');
+										const favourite = favMovies.includes(
+											id[id.length - 2]
+										);
+										return (
+											<MovieCard
+												key={index}
+												releaseDate={movie.release_date}
+												director={movie.director}
+												description={
+													movie.opening_crawl
+												}
+												episodeId={movie.episode_id}
+												title={movie.title}
+												movieId={id[id.length - 2]}
+												favHandler={favMovieListHandler}
+												favourite={favourite}
+											/>
+										);
+									})
+								) : (
+									<p style={{ fontSize: 20 }}>
+										Sorry! we could not find what you're
+										looking for 😔
+									</p>
+								)}
 							</div>
 						</div>
 					</>
