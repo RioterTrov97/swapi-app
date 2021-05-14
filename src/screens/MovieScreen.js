@@ -21,7 +21,6 @@ const MovieScreen = () => {
 		async function fetchData() {
 			try {
 				const request = await axios.get(`/films/${movieId}`);
-				console.log(request.data);
 				setMovie(request.data);
 				setLoading(() => false);
 			} catch (error) {
@@ -41,7 +40,6 @@ const MovieScreen = () => {
 					const request = await axios.get(
 						`/${newUrl[4]}/${newUrl[5]}`
 					);
-					console.log(request.data);
 					if (type === 'characters')
 						setCharacters((character) => [
 							...character,
