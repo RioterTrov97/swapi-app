@@ -106,7 +106,7 @@ const MovieScreen = () => {
 
 					<div className="MovieScreen__details">
 						<p>
-							Directed by {movie?.director} & Produced by
+							Directed by {movie?.director} & Produced by{' '}
 							{movie?.producer}.
 						</p>
 						<p>Released on {movie?.release_date}</p>
