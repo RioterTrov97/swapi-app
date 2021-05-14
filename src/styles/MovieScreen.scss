@@ -1,0 +1,117 @@
+//buttons colors
+$back-button-bg-color: rgb(132, 0, 255);
+$back-button-hover-color: rgb(192, 2, 218);
+
+$item-button-bg-color: rgb(83, 83, 83);
+$item-button-hover-color: rgb(0, 0, 0);
+
+//background colors
+$details-background-color: white;
+
+.MovieScreen {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&__container {
+		min-width: 90%;
+		max-width: 90%;
+		min-height: 90vh;
+		margin-top: 5vh;
+		margin-bottom: 5vh;
+		box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+		border-radius: 20px;
+		background: $details-background-color;
+		> div {
+			padding: 0 30px;
+		}
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		margin-top: 20px;
+		margin-bottom: 30px;
+
+		&__button {
+			font-size: 36px;
+			color: $back-button-bg-color;
+			cursor: pointer;
+		}
+
+		&__button:hover {
+			color: $back-button-hover-color;
+		}
+
+		&__episode {
+			font-size: 36px;
+			margin-left: 20px;
+			color: rgb(80, 78, 78);
+			text-align: center;
+		}
+
+		&__title {
+			font-size: 36px;
+			font-weight: bold;
+			color: rgb(31, 31, 31);
+		}
+	}
+
+	&__description {
+		margin: 30px 0;
+		> p {
+			font-weight: bold;
+			font-size: 20px;
+			margin-bottom: 5px;
+			line-height: 40px;
+			> span {
+				font-weight: 400;
+			}
+		}
+	}
+
+	&__details {
+		margin: 50px 0 20px 0;
+		> p {
+			margin-right: 20px;
+			margin-bottom: 10px;
+			font-style: italic;
+		}
+	}
+
+	&__characters {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		margin: 30px 20px 30px 0;
+
+		> p {
+			font-weight: bold;
+			font-size: 20px;
+			margin-bottom: 5px;
+		}
+
+		&__button {
+			background: $item-button-bg-color;
+			color: white;
+			margin: 10px 10px 10px 0;
+			padding: 10px 20px;
+			border: none;
+			outline: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		&__button:hover {
+			background: $item-button-hover-color;
+		}
+	}
+
+	&__edited {
+		margin-bottom: 20px;
+		> p {
+			font-style: italic;
+			color: gray;
+		}
+	}
+}
