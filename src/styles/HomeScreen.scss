@@ -64,11 +64,13 @@ $clearButton-hover-color: rgb(153, 0, 255);
 		width: 100%;
 		flex-direction: column;
 		justify-content: center;
+		margin-top: 30px;
+
 		&__resultClear {
 			display: flex;
 			width: 100%;
 			justify-content: center;
-			margin: 0 20px 40px -5px;
+			margin: 0px 20px 30px -5px;
 
 			> p {
 				padding: 20px 40px;
