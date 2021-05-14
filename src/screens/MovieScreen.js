@@ -96,7 +96,6 @@ const MovieScreen = () => {
 						<i
 							className="fas fa-arrow-circle-left MovieScreen__top__button"
 							onClick={() => history.push('/')}></i>
-
 						<p className="MovieScreen__top__episode">
 							Episode {movie?.episode_id}:&nbsp;
 							<span className="MovieScreen__top__title">

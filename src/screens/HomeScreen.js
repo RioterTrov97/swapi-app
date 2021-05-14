@@ -174,7 +174,11 @@ const HomeScreen = () => {
 										);
 									})
 								) : (
-									<p style={{ fontSize: 20 }}>
+									<p
+										style={{
+											fontSize: 20,
+											textAlign: 'center',
+										}}>
 										Sorry! we could not find what you're
 										looking for 😔
 									</p>
