@@ -57,7 +57,7 @@ const HomeScreen = () => {
 					.map((movie) => {
 						//add favourite data to movies
 						const movieId = movie?.url?.split('/');
-						if (fav.includes(movieId[movieId.length - 2])) {
+						if (fav?.includes(movieId[movieId.length - 2])) {
 							movie.favourite = true;
 						} else {
 							movie.favourite = false;
@@ -90,7 +90,7 @@ const HomeScreen = () => {
 	}, [setFavMovies, toggle]);
 
 	const searchHandler = (keyword) => {
-		const filtered = movies.filter((v) =>
+		const filtered = movies?.filter((v) =>
 			v.title.toLowerCase().includes(keyword.toLowerCase())
 		);
 		setSearchResult(filtered);
@@ -132,7 +132,7 @@ const HomeScreen = () => {
 								{!searchResult ? (
 									movies?.map((movie, index) => {
 										const id = movie.url.split('/');
-										const favourite = favMovies.includes(
+										const favourite = favMovies?.includes(
 											id[id.length - 2]
 										);
 										return (
