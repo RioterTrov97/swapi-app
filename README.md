@@ -1,4 +1,4 @@
-# Netflix Trailer
+# SWAPI
 
 This is a web app that I created where people can view star wars movie details.
 It is developed with React, SWAPI api, and Firebase for hosting.
