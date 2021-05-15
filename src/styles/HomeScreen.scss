@@ -11,8 +11,10 @@ $clearButton-hover-color: rgb(153, 0, 255);
 
 .HomeScreen {
 	width: 100vw;
+	min-height: 100vh;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 
 	&__container {
 		max-width: 1400px;

@@ -5,12 +5,13 @@ $text-color: rgb(192, 2, 218);
 .lds-hourglass {
 	display: inline-block;
 	position: relative;
-	width: 100vw;
+	width: 300px;
 	height: 100vh;
+	top: 0;
 
 	&__text {
 		position: absolute;
-		width: 100%;
+		width: 300px;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
@@ -32,7 +33,7 @@ $text-color: rgb(192, 2, 218);
 	display: block;
 	position: absolute;
 	top: 35%;
-	left: 45%;
+	left: 30%;
 	transform: translate(-50%, -50%);
 	border-radius: 50%;
 	width: 0;
@@ -42,13 +43,8 @@ $text-color: rgb(192, 2, 218);
 	border-color: $spinner-color transparent $spinner-color transparent;
 	animation: lds-hourglass 1.2s infinite;
 
-	@media screen and (max-width: 1000px) {
+	@media screen and (max-height: 1000px) {
 		top: 20%;
-		left: 35%;
-	}
-
-	@media screen and (min-width: 1400px) {
-		left: 47%;
 	}
 }
 @keyframes lds-hourglass {
