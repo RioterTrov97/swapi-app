@@ -72,12 +72,14 @@ $clearButton-hover-color: rgb(153, 0, 255);
 			justify-content: center;
 			margin: 0px 20px 30px -5px;
 
-			> p {
+			> button {
 				padding: 20px 40px;
 				cursor: pointer;
 				font-size: 20px;
 				text-align: center;
 				border-radius: 50px;
+				border: none;
+				outline: none;
 				background: linear-gradient(
 						to left,
 						$clearButton-bg-color 50%,
@@ -88,7 +90,7 @@ $clearButton-hover-color: rgb(153, 0, 255);
 				transition: 350ms ease-out;
 			}
 
-			> p:hover {
+			> button:hover {
 				background-position: left;
 				color: white;
 			}

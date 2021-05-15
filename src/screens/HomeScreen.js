@@ -121,9 +121,9 @@ const HomeScreen = () => {
 						<div className="HomeScreen__movieList">
 							{searchResult ? (
 								<div className="HomeScreen__movieList__resultClear">
-									<p onClick={() => clearSearch()}>
+									<button onClick={() => clearSearch()}>
 										Clear Search Results ❌<span></span>
-									</p>
+									</button>
 								</div>
 							) : null}
 
