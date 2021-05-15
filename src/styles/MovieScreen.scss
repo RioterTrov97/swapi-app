@@ -23,8 +23,20 @@ $details-background-color: white;
 		box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 		border-radius: 20px;
 		background: $details-background-color;
+
+		@media screen and (max-width: 600px) {
+			min-width: 95%;
+			max-width: 95%;
+			margin-top: 1vh;
+			margin-bottom: 1vh;
+		}
+
 		> div {
 			padding: 0 30px;
+
+			@media screen and (max-width: 600px) {
+				padding: 0 15px;
+			}
 		}
 	}
 
@@ -78,8 +90,13 @@ $details-background-color: white;
 			font-size: 20px;
 			margin-bottom: 5px;
 			line-height: 40px;
+			text-align: justify;
 			> span {
 				font-weight: 400;
+			}
+
+			@media screen and (max-width: 600px) {
+				font-size: 17px;
 			}
 		}
 	}
@@ -102,7 +119,7 @@ $details-background-color: white;
 		> p {
 			font-weight: bold;
 			font-size: 20px;
-			margin-bottom: 5px;
+			margin-bottom: 8px;
 		}
 
 		&__button {
@@ -114,6 +131,11 @@ $details-background-color: white;
 			outline: none;
 			border-radius: 5px;
 			cursor: pointer;
+
+			@media screen and (max-width: 600px) {
+				margin: 5px 8px 8px 0;
+				padding: 8px 10px;
+			}
 		}
 		&__button:hover {
 			background: $item-button-hover-color;

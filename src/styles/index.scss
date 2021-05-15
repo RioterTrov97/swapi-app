@@ -2,10 +2,16 @@
 	margin: 0;
 	padding: 0;
 }
-body {
-	margin: 0;
+
+body,
+html {
+	min-width: 100vw;
 	max-width: 100vw;
 	overflow-x: hidden;
+}
+
+body {
+	margin: 0;
 	background: rgb(236, 243, 251);
 	font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI',
 		'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
