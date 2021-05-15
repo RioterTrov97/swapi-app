@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import './App.css';
 import HomeScreen from './screens/HomeScreen';
 import MovieScreen from './screens/MovieScreen';
 
