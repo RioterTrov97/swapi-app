@@ -24,6 +24,9 @@ $card-hover-color: rgb(229, 205, 255);
 
 	&:hover {
 		background: $card-hover-color;
+		@media screen and (max-width: 600px) {
+			background: none;
+		}
 	}
 
 	&__episode {
